@@ -21,8 +21,8 @@ SWEP.Category = "Simple Weapons" --Where this gun will be in the Q menu
 SWEP.SpawnMenuIcon = "vgui/entities/simple_gun" --The icon displayed in the Q menu
 
 SWEP.UseHands = true --If there is a c_ before SWEP.ViewModel then set this to true. Otherwise set this to false
-SWEP.ViewModel = "models/weapons/cstrike/c_rif_ak47.mdl" --The model you see when you hold it
-SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl" --The model other players see when you hold it
+SWEP.ViewModel = "models/weapons/c_pist_deagle.mdl" --The model you see when you hold it
+SWEP.WorldModel = "models/weapons/w_pist_deagle.mdl" --The model other players see when you hold it
 
 SWEP.Weight = 2 --Higher the weight, the higher priority this weapon has to be auto switched to
 SWEP.AutoSwitchTo = false --Autoswitch to this weapon when you pick it up or run out of ammo in your other gun
