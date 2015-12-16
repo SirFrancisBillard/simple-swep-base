@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "vgui/entities/simple_gun"
+	"$surfaceprop" "Default"
+	"$translucent" 1
+}
