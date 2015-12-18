@@ -27,16 +27,16 @@ SWEP.WorldModel = "models/weapons/w_pist_deagle.mdl" --The model other players s
 SWEP.Weight = 2 --Higher the weight, the higher priority this weapon has to be auto switched to
 SWEP.AutoSwitchTo = false --Autoswitch to this weapon when you pick it up or run out of ammo in your other gun
 SWEP.AutoSwitchFrom = false --Autoswitch away from this weapon if you pick something else up or run out of ammo
-SWEP.HoldType = "pistol" --How the weapon is held from third person view
+SWEP.HoldType = "revolver" --How the weapon is held from third person view
 
-SWEP.Primary.Sound = Sound("Weapon_AK47.Single") --The sound made when the gun shoots
+SWEP.Primary.Sound = Sound("weapons/deagle/deagle-1.wav") --The sound made when the gun shoots
 SWEP.Primary.Recoil = 5 --How much kick the gun has upon firing
 SWEP.Primary.Damage = 80 --Base damage this weapon deals
 SWEP.Primary.NumShots = 1 --Number of bullets fired per shot. Only really useful for shotguns
 SWEP.Primary.Cone = 0.002 --The amount of degrees bullets might stray from the crosshair (Inaccuracy)
 SWEP.Primary.ClipSize = 7 --The amount of bullets in a clip
 SWEP.Primary.Delay = 0.3 --The delay in seconds between each shot
-SWEP.Primary.DefaultClip = 30 --The amount of spare ammo you get for picking this gun up
+SWEP.Primary.DefaultClip = 7 --The amount of spare ammo you get for picking this gun up
 SWEP.Primary.Automatic = false --Whether or not this weapon fires automatically
 SWEP.Primary.Ammo = "357" --What ammo is used. For all ammo types, go here: https://wiki.garrysmod.com/page/Default_Ammo_Types
 
