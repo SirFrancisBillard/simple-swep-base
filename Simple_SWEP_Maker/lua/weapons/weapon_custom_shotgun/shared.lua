@@ -25,7 +25,7 @@ SWEP.AutoSwitchFrom = false
 
 SWEP.HoldType = "ar2"
 
-SWEP.Primary.Sound = Sound("Weapon_M3.Single")
+SWEP.Primary.Sound = Sound("weapons/m3/m3-1.wav")
 SWEP.Primary.Recoil = 1.5
 SWEP.Primary.Damage = 20
 SWEP.Primary.NumShots = 8
@@ -55,6 +55,8 @@ function SWEP:SetupDataTables()
     -- Bool 1 = Reloading
     self:NetworkVar("Bool", 2, "AttackQueued")
 end
+
+--The below stuff is so it stops reloading when it is full and the animation doesn't get stuck
 
 function SWEP:Reload()
     -- Already reloading
