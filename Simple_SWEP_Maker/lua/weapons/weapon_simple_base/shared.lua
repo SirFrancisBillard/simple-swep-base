@@ -35,8 +35,8 @@ SWEP.Weight = 5
 
 -- Viewmodel animations
 
-SWEP.BobScale = 1
-SWEP.SwayScale = 1
+SWEP.BobScale = 1.0
+SWEP.SwayScale = 1.0
 
 -- Info box info
 
@@ -93,7 +93,7 @@ SWEP.ExtraReloadSound = "" -- Sound played over the default reload sound
 
 SWEP.AccurateCrosshair = true -- 3D crosshair
 SWEP.m_WeaponDeploySpeed = 1 -- Multiplier of weapon deploy animation speed
-SWEP.ShouldDropOnDeath = false
+SWEP.ShouldDropOnDeath = true
 
 -- Base code
 
