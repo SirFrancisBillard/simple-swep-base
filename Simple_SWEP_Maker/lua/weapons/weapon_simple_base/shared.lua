@@ -134,7 +134,7 @@ function SWEP:PrimaryAttack()
 	bullet.Tracer	= self.Primary.Trace -- Show a tracer on every X bullets
 	bullet.Force	= self.Primary.PushForce
 	bullet.Damage	= self.Primary.Damage
-	bullet.AmmoType = "Pistol"
+	bullet.AmmoType = self.Primary.Ammo
 	self.Owner:FireBullets( bullet )
 	self:ShootEffects()
 	self.Owner:ViewPunch( Angle( self.Primary.Recoil * -1, 0, 0 ) )
@@ -152,7 +152,7 @@ function SWEP:SecondaryAttack()
 	bullet.Tracer	= self.Secondary.Trace -- Show a tracer on every X bullets
 	bullet.Force	= self.Secondary.PushForce
 	bullet.Damage	= self.Secondary.Damage
-	bullet.AmmoType = "Pistol"
+	bullet.AmmoType = self.Secondary.Ammo
 	self.Owner:FireBullets( bullet )
 	self:ShootEffects()
 	self.Owner:ViewPunch( Angle( self.Secondary.Recoil * -1, 0, 0 ) )
