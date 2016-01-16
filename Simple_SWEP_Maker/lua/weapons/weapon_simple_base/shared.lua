@@ -1,5 +1,11 @@
 AddCSLuaFile()
 
+-- Tables ( Do not mess with )
+
+SWEP = {}
+SWEP.Primary = {}
+SWEP.Secondary = {}
+
 -- Spawning info
 
 SWEP.Spawnable = true
@@ -7,7 +13,6 @@ SWEP.AdminOnly = true
 
 -- SWEP info
 
-SWEP.ClassName = "simple_base"
 SWEP.PrintName = "Simple SWEP Base"
 SWEP.Base = "weapon_base"
 
@@ -103,27 +108,27 @@ end
 
 function SWEP:Reload()
 	self.Weapon:DefaultReload( ACT_VM_RELOAD )
-	if not SWEP.ExtraReloadSound == "" then
+	if not self.ExtraReloadSound == "" then
 		self.Weapon:EmitSound( self.ExtraReloadSound )
 	end
 end
 
 function SWEP:Holster( wep )
-	return true
-	if not SWEP.HolsterSound == "" then
+	if not self.HolsterSound == "" then
 		self.Weapon:EmitSound( self.HolsterSound )
 	end
+	return true
 end
 
 function SWEP:Deploy()
-	return true
-	if not SWEP.DeploySound == "" then
+	if not self.DeploySound == "" then
 		self.Weapon:EmitSound( self.DeploySound )
 	end
+	return true
 end
 
 function SWEP:PrimaryAttack()
-	if not self:CanPrimaryAttack then return end
+	if not self:CanPrimaryAttack() then return end
 	self:TakePrimaryAmmo( 1 )
 	self.Weapon:EmitSound( self.Primary.Sound )
 	local bullet = {}
@@ -141,7 +146,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-	if not self:CanSecondaryAttack then return end
+	if not self:CanSecondaryAttack() then return end
 	self:TakeSecondaryAmmo( 1 )
 	self.Weapon:EmitSound( self.Secondary.Sound )
 	local bullet = {}
